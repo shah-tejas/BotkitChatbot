@@ -9,6 +9,10 @@ module.exports = function(controller) {
         await bot.reply(message, 'I heard a sample message.');
     });
 
+    controller.hears('Tejas','message,direct_message', async(bot, message) => {
+        await bot.reply(message, 'Special message for Tejas');
+    });
+
     controller.on('message,direct_message', async(bot, message) => {
         await bot.reply(message, `Echo: ${ message.text }`);
     });
